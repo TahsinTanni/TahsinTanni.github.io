@@ -30,7 +30,7 @@ const skills = [
     ]
   },
   {
-    category: "Embedded Systems",
+    category: "Embedded",
     icon: "🔌",
     items: [
       { name: "Arduino", level: 85 },
@@ -49,13 +49,13 @@ const skills = [
   }
 ];
 
-function Skills() {
+function Skills({ theme }) {
   return (
     <div className="skills-container fade-in">
       <h2 className="section-title">Skills</h2>
       <div className="skills-grid">
         {skills.map((group) => (
-          <div className="skill-card glass-card" key={group.category}>
+          <div className={`skill-card glass-card ${theme}`} key={group.category}>
             <h3>
               <span className="skill-icon">{group.icon}</span> {group.category}
             </h3>

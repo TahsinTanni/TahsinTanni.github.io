@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import profilePic from '../assets/pic.jpg';
+import './Home.css';
 
 const introText = "CSE Student | AI/ML | MERN Stack | Data Science | Embedded Systems";
 
@@ -16,7 +18,6 @@ function Typing({ text }) {
   return <span>{typed}<span className="cursor">|</span></span>;
 }
 
-// Simple animated particles (dots)
 function Particles() {
   return (
     <div className="particles-bg">
@@ -27,14 +28,14 @@ function Particles() {
   );
 }
 
-function Home() {
+function Home({ theme }) {
   return (
-    <div className="home-bg fade-in">
+    <div className={`home-bg fade-in ${theme}`}>
       <Particles />
       <div className="home-hero">
         <div className="profile-pic-wrap">
           <img
-            src="https://avatars.githubusercontent.com/u/124211869?v=4"
+            src={profilePic}
             alt="Tahsin Tanni"
             className="profile-pic"
           />
