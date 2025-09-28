@@ -24,6 +24,12 @@
   transition: border 0.2s;
 }
 
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
 body.dark .contact-form input,
 body.dark .contact-form textarea {
   background: #23243a;
@@ -42,17 +48,25 @@ body.dark .contact-form textarea:focus {
   border: 2px solid #8A79FF;
 }
 
+.gradient-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #cccccc;
+}
+
 .contact-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
   justify-content: center;
   margin-top: 1rem;
+  flex-wrap: wrap;
 }
 
 .contact-icon {
   display: inline-block;
   transition: transform 0.2s, filter 0.2s;
   filter: drop-shadow(0 0 6px #6C63FF);
+  text-decoration: none;
 }
 
 body.dark .contact-icon {
@@ -62,4 +76,49 @@ body.dark .contact-icon {
 .contact-icon:hover {
   transform: scale(1.15);
   filter: drop-shadow(0 0 12px #8A79FF);
+}
+
+/* GitHub icon specific styling */
+.contact-icon svg path[fill] {
+  transition: fill 0.2s;
+}
+
+body.dark .contact-icon svg path[fill] {
+  fill: #8A79FF;
+}
+
+.contact-icon:hover svg path[fill] {
+  fill: #8A79FF;
+}
+
+/* Status messages */
+.submit-status {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.submit-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.submit-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f1b0b7;
+}
+
+body.dark .submit-status.success {
+  background-color: #155724;
+  color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+body.dark .submit-status.error {
+  background-color: #721c24;
+  color: #f8d7da;
+  border-color: #f1b0b7;
 }

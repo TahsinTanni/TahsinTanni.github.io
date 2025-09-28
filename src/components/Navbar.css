@@ -1,0 +1,91 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #fff 0%, #f8e1f4 100%);
+  padding: 0.7rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(108,99,255,0.08);
+  border-bottom: 2px solid #e3e6fd;
+}
+
+body.dark .navbar {
+  background: #181818;
+  border-bottom: 2px solid #23243a;
+}
+
+.navbar-logo {
+  font-size: 1.7rem;
+  color: #6C63FF;
+  font-weight: 700;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+body.dark .navbar-logo {
+  color: #8A79FF;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li button {
+  background: none;
+  border: none;
+  color: #6C63FF;
+  font-size: 1.1rem;
+  padding: 0.3rem 0.9rem;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+body.dark .navbar-links li button {
+  color: #e0e0e0;
+}
+
+.navbar-links li button:hover {
+  background: linear-gradient(90deg, #e3e6fd 0%, #6C63FF 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px #6C63FF;
+}
+
+body.dark .navbar-links li button:hover {
+  background: linear-gradient(90deg, #23243a 0%, #8A79FF 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px #8A79FF;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 1.5rem;
+  cursor: pointer;
+  color: #6C63FF;
+  transition: color 0.2s;
+}
+
+body.dark .theme-toggle {
+  color: #8A79FF;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .navbar-links {
+    gap: 1rem;
+    margin-top: 0.7rem;
+  }
+}

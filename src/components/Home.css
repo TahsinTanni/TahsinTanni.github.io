@@ -9,6 +9,7 @@
   box-shadow: 0 4px 32px rgba(108,99,255,0.10);
   margin-top: 2rem;
   overflow: hidden;
+  padding: 2rem; /* Added padding for better spacing */
 }
 body.dark .home-bg {
   background: linear-gradient(120deg, #121212 0%, #23243a 100%);
@@ -18,20 +19,23 @@ body.dark .home-bg {
 .home-hero {
   display: flex;
   align-items: center;
+  justify-content: center; /* Center the entire hero content */
   gap: 2.5rem;
   z-index: 2;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 1rem; /* Added padding for better mobile spacing */
 }
 @media (max-width: 800px) {
   .home-hero {
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem; /* Slightly increased gap for better mobile spacing */
     text-align: center;
+    align-items: center; /* Ensure center alignment on mobile */
   }
   .profile-pic-wrap {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem; /* Reduced margin for tighter mobile layout */
   }
 }
 
@@ -39,6 +43,7 @@ body.dark .home-bg {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* Prevent shrinking of profile pic container */
 }
 
 .profile-pic {
@@ -52,6 +57,7 @@ body.dark .home-bg {
   box-shadow: 0 8px 32px rgba(108,99,255,0.18), 0 2px 8px rgba(255,182,193,0.12);
   background: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
+  display: block; /* Ensure proper display */
 }
 .profile-pic:hover {
   transform: scale(1.05);
@@ -69,6 +75,17 @@ body.dark .profile-pic:hover {
 .hero-text {
   flex: 1;
   min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text content vertically */
+  align-items: flex-start; /* Align text to the left on desktop */
+}
+
+@media (max-width: 800px) {
+  .hero-text {
+    align-items: center; /* Center align text on mobile */
+    text-align: center;
+  }
 }
 
 .home-title {
@@ -78,6 +95,7 @@ body.dark .profile-pic:hover {
   font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
   margin-bottom: 1.2rem;
   letter-spacing: 2px;
+  line-height: 1.2; /* Added line height for better text spacing */
 }
 body.dark .home-title {
   color: #8A79FF;
@@ -89,9 +107,17 @@ body.dark .home-title {
   min-height: 2.5rem;
   letter-spacing: 1px;
   font-family: 'Poppins', Arial, sans-serif;
+  display: flex;
+  align-items: center; /* Center align the typing animation */
 }
 body.dark .typing {
   color: #8A79FF;
+}
+
+@media (max-width: 800px) {
+  .typing {
+    justify-content: center; /* Center the typing text on mobile */
+  }
 }
 
 .cursor {
@@ -102,6 +128,11 @@ body.dark .typing {
 }
 body.dark .cursor {
   color: #8A79FF;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
 }
 
 .particles-bg {
