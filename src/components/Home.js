@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import profilePic from '../assets/pic.jpg';
 import './Home.css';
+import cvFile from '../assets/CV_Tahsin copy.pdf';
 
-const introText = "CSE Student | AI/ML | MERN Stack | Data Science | Embedded Systems";
+const tagline = "CSE Student | Future Software Engineer";
 
 function Typing({ text }) {
   const [typed, setTyped] = useState('');
@@ -12,40 +12,63 @@ function Typing({ text }) {
       setTyped(text.slice(0, i));
       i++;
       if (i > text.length) clearInterval(interval);
-    }, 40);
+    }, 45);
     return () => clearInterval(interval);
   }, [text]);
   return <span>{typed}<span className="cursor">|</span></span>;
 }
 
-function Particles() {
-  return (
-    <div className="particles-bg">
-      {[...Array(18)].map((_, i) => (
-        <div key={i} className={`particle particle-${i}`} />
-      ))}
-    </div>
-  );
+function handleScrollToProjects() {
+  const el = document.getElementById('projects');
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 
-function Home({ theme }) {
+function Home() {
   return (
-    <div className={`home-bg fade-in ${theme}`}>
-      <Particles />
-      <div className="home-hero">
-        <div className="profile-pic-wrap">
-          <img
-            src={profilePic}
-            alt="Tahsin Tanni"
-            className="profile-pic"
-          />
-        </div>
+    <section className="hero-bg fade-in">
+      <div className="hero-content">
         <div className="hero-text">
-          <h1 className="home-title">Hi, I'm Tahsin Tanni</h1>
-          <p className="typing"><Typing text={introText} /></p>
+          <h1 className="hero-title">Hi, I'm Tahsin Tanni</h1>
+          <p className="typing"><Typing text={tagline} /></p>
+          <div className="hero-btns">
+            <button
+              className="gradient-btn"
+              onClick={handleScrollToProjects}
+              aria-label="Scroll to projects section"
+            >
+              View Projects
+            </button>
+            <a
+              className="gradient-btn"
+              href={cvFile}
+              download="Tahsin_Tanni_CV.pdf"
+              aria-label="Download CV"
+            >
+              Download CV
+            </a>
+          </div>
+        </div>
+        <div className="hero-illustration">
+          {/* Simple developer SVG illustration */}
+          <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
+            <rect x="20" y="40" width="140" height="100" rx="18" fill="url(#devGradient)" />
+            <rect x="40" y="60" width="100" height="60" rx="12" fill="#fff" />
+            <rect x="55" y="75" width="70" height="10" rx="5" fill="#6C63FF" />
+            <rect x="55" y="95" width="40" height="10" rx="5" fill="#8A79FF" />
+            <circle cx="150" cy="50" r="12" fill="#6C63FF" opacity="0.18" />
+            <circle cx="30" cy="130" r="8" fill="#8A79FF" opacity="0.18" />
+            <defs>
+              <linearGradient id="devGradient" x1="20" y1="40" x2="160" y2="140" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#6C63FF"/>
+                <stop offset="1" stopColor="#8A79FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
