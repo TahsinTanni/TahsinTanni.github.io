@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import './About.css';
-import pic from '../assets/pic.jpg';
 
 function About() {
   const ref = useRef();
@@ -31,11 +30,7 @@ function About() {
           </p>
         </div>
         <div className="about-illustration">
-          <img
-            src={pic}
-            alt="Tahsin Tanni Profile"
-            className="profile-pic"
-          />
+          {/* Profile picture moved to Home section */}
         </div>
       </div>
     </section>

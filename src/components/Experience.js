@@ -28,30 +28,32 @@ const cardVariants = {
 
 function Experience() {
   return (
-    <section id="experience" className="experience-section">
-      <h2 className="experience-heading">Experience</h2>
-      <div className="timeline">
-        {experiences.map((exp, i) => (
-          <motion.div
-            className="timeline-card"
-            key={i}
-            custom={i}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            variants={cardVariants}
-          >
-            <div className="timeline-dot" />
-            <div className="timeline-content">
-              <h3 className="role">{exp.role}</h3>
-              <span className="company">{exp.company}</span>
-              <span className="duration">{exp.duration}</span>
-              <p className="description">{exp.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-    </section>
+    <div className="experience-container">
+      <section id="experience" className="experience-section">
+        <h2 className="experience-heading">Experience</h2>
+        <div className="timeline">
+          {experiences.map((exp, i) => (
+            <motion.div
+              className="timeline-card"
+              key={i}
+              custom={i}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={cardVariants}
+            >
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h3 className="role">{exp.role}</h3>
+                <span className="company">{exp.company}</span>
+                <span className="duration">{exp.duration}</span>
+                <p className="description">{exp.description}</p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 

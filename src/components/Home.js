@@ -51,21 +51,26 @@ function Home() {
           </div>
         </div>
         <div className="hero-illustration">
-          {/* Simple developer SVG illustration */}
-          <svg width="180" height="180" viewBox="0 0 180 180" fill="none">
-            <rect x="20" y="40" width="140" height="100" rx="18" fill="url(#devGradient)" />
-            <rect x="40" y="60" width="100" height="60" rx="12" fill="#fff" />
-            <rect x="55" y="75" width="70" height="10" rx="5" fill="#6C63FF" />
-            <rect x="55" y="95" width="40" height="10" rx="5" fill="#8A79FF" />
-            <circle cx="150" cy="50" r="12" fill="#6C63FF" opacity="0.18" />
-            <circle cx="30" cy="130" r="8" fill="#8A79FF" opacity="0.18" />
-            <defs>
-              <linearGradient id="devGradient" x1="20" y1="40" x2="160" y2="140" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#6C63FF"/>
-                <stop offset="1" stopColor="#8A79FF"/>
-              </linearGradient>
-            </defs>
-          </svg>
+          <img
+            src={`${process.env.PUBLIC_URL}/pic.jpg`}
+            alt="Tahsin Tanni Profile"
+            className="profile-pic"
+            style={{
+              width: '180px',
+              height: '180px',
+              borderRadius: '20px',
+              objectFit: 'cover',
+              boxShadow: '0 8px 24px rgba(108, 99, 255, 0.2)',
+              border: '3px solid rgba(108, 99, 255, 0.1)'
+            }}
+            onLoad={() => {
+              console.log('Profile image loaded successfully in Home');
+            }}
+            onError={(e) => {
+              console.log('Failed to load image in Home, showing fallback');
+              e.target.style.display = 'none';
+            }}
+          />
         </div>
       </div>
     </section>
