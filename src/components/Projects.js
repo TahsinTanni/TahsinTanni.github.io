@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import './Projects.css';
 import placeholder from '../assets/placeholder.jpg';
 import { FiExternalLink, FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
@@ -113,8 +114,11 @@ function Projects() {
                     href={proj.code}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="project-btn"
-                  >View on GitHub</a>
+                    className="project-btn github-btn"
+                  >
+                    <FaGithub className="github-icon" />
+                    GitHub
+                  </a>
                 </div>
               </div>
             </motion.div>

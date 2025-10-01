@@ -2,13 +2,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(120deg, #fff 0%, #f6f8fb 100%);
+  background: linear-gradient(120deg, #2c3e50 0%, #34495e 100%);
   padding: 0.9rem 2.5rem;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 4px 32px rgba(40,60,90,0.08);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 32px rgba(44, 62, 80, 0.15);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -21,11 +21,11 @@ body.dark .navbar {
 
 .navbar-logo {
   font-size: 1.8rem;
-  color: #23243a;
+  color: #f1f5f9;
   font-weight: 700;
   font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
   letter-spacing: 1.5px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 body.dark .navbar-logo {
@@ -42,8 +42,8 @@ body.dark .navbar-logo {
 
 .navbar-links li button {
   background: rgba(255,255,255,0.1);
-  border: 1px solid rgba(0,0,0,0.1);
-  color: #23243a;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #f1f5f9;
   font-size: 1rem;
   padding: 0.5rem 1.2rem;
   border-radius: 20px;
@@ -56,17 +56,17 @@ body.dark .navbar-logo {
 }
 
 .navbar-links li button:hover {
-  background: rgba(36,36,58,0.1);
+  background: rgba(255,255,255,0.2);
   color: #38bdf8;
-  box-shadow: 0 4px 16px rgba(255,255,255,0.3);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.2);
   transform: translateY(-2px);
 }
 
 .navbar-links li button.active {
-  background: #23243a;
-  color: #38bdf8;
-  box-shadow: 0 4px 16px rgba(255,255,255,0.4);
-  border-color: #23243a;
+  background: linear-gradient(90deg, #6cb6ff 0%, #38bdf8 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.3);
+  border-color: transparent;
 }
 
 body.dark .navbar-links li button {
@@ -89,14 +89,14 @@ body.dark .navbar-links li button.active {
 }
 
 .theme-toggle {
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 50%;
   font-size: 1.5rem;
   padding: 0.5rem;
   margin-left: 1.5rem;
   cursor: pointer;
-  color: #23243a;
+  color: #f1f5f9;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -108,9 +108,9 @@ body.dark .navbar-links li button.active {
 }
 
 .theme-toggle:hover {
-  background: rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.2);
   transform: rotate(180deg) scale(1.1);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.2);
 }
 
 body.dark .theme-toggle {
@@ -128,8 +128,8 @@ body.dark .theme-toggle:hover {
   display: none;
   flex-direction: column;
   gap: 5px;
-  background: rgba(255,255,255,0.2);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
   border-radius: 8px;
   padding: 0.5rem;
   cursor: pointer;
@@ -139,14 +139,14 @@ body.dark .theme-toggle:hover {
 }
 
 .hamburger:hover {
-  background: rgba(0,0,0,0.05);
+  background: rgba(255,255,255,0.2);
 }
 
 .hamburger span {
   display: block;
   width: 24px;
   height: 3px;
-  background: #23243a;
+  background: #f1f5f9;
   border-radius: 2px;
   transition: all 0.3s ease;
 }

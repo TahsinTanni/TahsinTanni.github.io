@@ -202,6 +202,44 @@ body.dark .tech-tag:hover {
   box-shadow: 0 4px 18px #38bdf844;
 }
 
+.github-btn {
+  background: #4a5568;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(74, 85, 104, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+.github-btn:hover {
+  background: #2d3748;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(74, 85, 104, 0.4);
+}
+
+body.dark .github-btn {
+  background: #6b7280;
+  color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .github-btn:hover {
+  background: #9ca3af;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.github-icon {
+  font-size: 1.2rem;
+}
+
 .see-more-card {
   justify-content: center;
   align-items: center;
