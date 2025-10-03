@@ -5,18 +5,22 @@ import { motion } from 'framer-motion';
 import './Skills.css';
 
 const skills = [
-  { name: "React", icon: <FaReact color="#61DBFB" />, percentage: 95 },
+  { name: "React", icon: <FaReact color="#61DBFB" />, percentage: 85 },
   { name: "Node.js", icon: <FaNodeJs color="#8CC84B" />, percentage: 90 },
-  { name: "Python", icon: <FaPython color="#3776AB" />, percentage: 88 },
-  { name: "C++", icon: <SiCplusplus color="#00599C" />, percentage: 93 },
+  { name: "Python", icon: <FaPython color="#3776AB" />, percentage: 96 },
+  { name: "C++", icon: <SiCplusplus color="#00599C" />, percentage: 61 },
   { name: "HTML", icon: <FaHtml5 color="#E34F26" />, percentage: 96 },
-  { name: "CSS", icon: <FaCss3Alt color="#1572B6" />, percentage: 94 },
-  { name: "JavaScript", icon: <FaJsSquare color="#F7DF1E" />, percentage: 91 },
+  { name: "CSS", icon: <FaCss3Alt color="#1572B6" />, percentage: 70 },
+  { name: "JavaScript", icon: <FaJsSquare color="#F7DF1E" />, percentage: 85 },
   { name: "MongoDB", icon: <SiMongodb color="#47A248" />, percentage: 87 },
   { name: "Assembly", icon: <SiAssemblyscript color="#FF6B6B" />, percentage: 85 },
   { name: "Express.js", icon: <SiExpress color="#68D391" />, percentage: 89 },
   { name: "Next.js", icon: <SiNextdotjs color="#000000" />, percentage: 88 },
   { name: "MySQL", icon: <SiMysql color="#E97627" />, percentage: 82 },
+  { name: "Solidity", icon: <FaPython color="#363636" />, percentage: 75 },
+  { name: "Web3.js", icon: <FaJsSquare color="#F7DF1E" />, percentage: 70 },
+  { name: "Verilog", icon: <SiCplusplus color="#00599C" />, percentage: 60 },
+  { name: "Git", icon: <FaJsSquare color="#F05032" />, percentage: 85 },
 ];
 
 const cardVariants = {

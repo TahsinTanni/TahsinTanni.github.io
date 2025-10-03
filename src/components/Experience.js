@@ -10,10 +10,10 @@ const experiences = [
     description: "Tutored high school students in Python programming, covering basics to advanced topics. Helped students with coding assignments and projects.",
   },
   {
-    role: "AI Research Assistant",
+    role: "Undergraduate Researcher",
     company: "University CSE Lab",
     duration: "Jan 2025 - Present",
-    description: "Assisted in research on machine learning models for healthcare data. Implemented Python scripts for data preprocessing and model evaluation.",
+    description: "Doing thesis on enhancing Robustness of Large Language Models Against Quantization Attacks through Weight Noise Injection",
   }
 ];
 
