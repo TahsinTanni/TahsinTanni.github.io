@@ -107,7 +107,7 @@ function Contact({ theme }) {
           <div className="contact-method">
             <FiLinkedin size={28} className="contact-icon" />
             <span className="contact-label">LinkedIn</span>
-            <a href="https://linkedin.com/in/tahsintanni" target="_blank" rel="noopener noreferrer" className="contact-link">/in/tahsintanni</a>
+            <a href="https://www.linkedin.com/in/tahsin-tanni-120156215/" target="_blank" rel="noopener noreferrer" className="contact-link">/in/tahsintanni</a>
           </div>
           <div className="contact-method">
             <FiGithub size={28} className="contact-icon" />
