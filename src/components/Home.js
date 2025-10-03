@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import cvFile from '../assets/CV_Tahsin copy.pdf';
 
-const tagline = "CSE Student | Future Software Engineer";
+const tagline = "Undergraduate CSE Student | ML Enthusiast & Aspiring Web/Full-Stack Developer";
 
 function Typing({ text }) {
   const [typed, setTyped] = useState('');
