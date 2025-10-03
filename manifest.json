@@ -1,0 +1,9 @@
+{
+  "short_name": "Tanni's Portfolio",
+  "name": "Tanni's Portfolio - Tahsin Tanni",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#6C63FF",
+  "background_color": "#ffffff"
+}
