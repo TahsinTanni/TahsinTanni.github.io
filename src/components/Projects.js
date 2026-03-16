@@ -137,7 +137,6 @@ function Projects() {
                       className="project-btn live-btn"
                     >
                       <FiExternalLink className="live-icon" />
-                      Live Demo
                     </a>
                   )}
                   {proj.code && (
@@ -148,7 +147,6 @@ function Projects() {
                       className="project-btn github-btn"
                     >
                       <FaGithub className="github-icon" />
-                      GitHub
                     </a>
                   )}
                 </div>
