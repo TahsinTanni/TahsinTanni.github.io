@@ -17,7 +17,7 @@
   border-radius: 18px;
   border: 1px solid #e3e6fd;
   font-size: 1rem;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   resize: none;
   background: #e3e6fd;
   box-shadow: 0 2px 8px #e3e6fd;
@@ -156,7 +156,7 @@ body.dark .contact-section {
   font-size: 2.2rem;
   font-weight: 700;
   color: #23243a;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin-bottom: 1.1rem;
   letter-spacing: 1px;
 }
@@ -172,7 +172,7 @@ body.dark .contact-link {
   font-size: 1.15rem;
   color: #23243a;
   margin-bottom: 2rem;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   font-weight: 500;
 }
 
@@ -181,7 +181,7 @@ body.dark .contact-link {
   border-radius: 16px;
   border: 1.5px solid #e3e6ed;
   font-size: 1.05rem;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   background: #f8fafc;
   color: #23243a;
   outline: none;
@@ -302,14 +302,14 @@ body.dark .contact-icon {
   font-weight: 600;
   color: #23243a;
   margin-right: 0.5rem;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .contact-link {
   font-size: 1.05rem;
   color: #23243a;
   text-decoration: none;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   transition: color 0.2s;
   font-weight: 500;
 }

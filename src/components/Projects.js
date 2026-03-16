@@ -7,40 +7,59 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
-    title: "Disaster Recovery Training Smart Contract",
+    title: "ThesisFlow - Thesis Management System",
     image: placeholder,
-    description: "Smart contract for managing disaster recovery training programs.",
-    tech: ["Solidity", "Ethereum", "Web3.js", "Metamask"],
-    code: "https://github.com/TahsinTanni/Disaster-Recovery-Training-Smart-Contract"
+    description: "A web application to manage thesis submissions, reviews, and approvals. Features include student-supervisor collaboration, document management, progress tracking, and automated workflow for thesis evaluation and defense scheduling.",
+    tech: ["React", "Express", "MongoDB", "Node.js"],
+    code: "https://github.com/Faishal-Monir/Thesis-Management-System",
+    live: "https://thesis-flow-delta.vercel.app/"
+  },
+  {
+    title: "DataSynthis Job Task — Hugging Face Space",
+    image: placeholder,
+    description: "Developed an interactive Hugging Face Space demonstrating data synthesis using generative AI techniques for job-related analytics. Enabled dynamic user interaction for synthetic data generation and visualization through a web-based interface.",
+    tech: ["pandas", "numpy", "matplotlib", "statsmodels", "scikit-learn", "prophet", "tensorflow", "gradio", "Hugging Face Hub"],  
+    live: "https://huggingface.co/spaces/tahsintajwar/DataSynthis_Job_task"
+  },
+  {
+    title: "Realtime Collaborative Playlist",
+    image: placeholder,
+    description: "Built a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
+    tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
+    code: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
+    live: "https://realtime-collaborative-playlist.vercel.app/"
+  },
+  
+  {
+    title: "CineMetrics – MLproject",
+    image: placeholder,
+    description: "A machine learning project designed to empower film producers and stakeholders with predictive insights into audience response.",
+    tech: ["pandas", "NumPy", "scikit-learn", "matplotlib", "seaborn"],
+    code: "https://github.com/TahsinTanni/CineMetrics_MLproject"
   },
   {
     title: "VAE-based Deep Clustering with Uncertainty",
     image: placeholder,
-    description: "Research project on deep clustering using Variational Autoencoders.",
+    description: "Research project on deep clustering using Variational Autoencoders with uncertainty quantification. Implements advanced neural network architectures for unsupervised learning and cluster analysis with probabilistic modeling.",
     tech: ["Python", "TensorFlow", "Keras", "scikit-learn", "pyTorch"],
     code: "https://github.com/TahsinTanni/vae-dec-clustering-uncertainty"
   },
   {
-    title: "Thesis Management System",
+    title: "Disaster Recovery Training Smart Contract",
     image: placeholder,
-    description: "A web application to manage thesis.",
-    tech: ["React", "Express", "MongoDB", "Node.js"],
-    code: "https://github.com/Faishal-Monir/Thesis-Management-System"
+    description: "Smart contract for managing disaster recovery training programs on the Ethereum blockchain. Enables transparent tracking of training sessions, certification issuance, and participant verification with decentralized record-keeping.",
+    tech: ["Solidity", "Ethereum", "Web3.js", "Metamask"],
+    code: "https://github.com/TahsinTanni/Disaster-Recovery-Training-Smart-Contract"
   },
+  
   {
     title: "Property Tracker",
     image: placeholder,
-    description: "A web app to track property prices and trends.",
+    description: "A web application to track property prices, market trends, and real estate analytics. Built on Hyperledger Fabric blockchain for secure and immutable property transaction records and ownership history.",
     tech: ["React", "Express", "MongoDB", "Node.js", "Hyperledger Fabric"],
     code: "https://github.com/TahsinTanni/property-tracker-fabric"
   },
-  {
-    title: "Rush N Dodge Game",
-    image: placeholder,
-    description: "A simple 2D game built with OpenGL.",
-    tech: ["C++", "OpenGL", "GLFW", "GLM"],
-    code: "https://github.com/TahsinTanni/rush-n-dodge"
-  }
+  
 ];
 
 function Projects() {
@@ -110,15 +129,28 @@ function Projects() {
                   ))}
                 </div>
                 <div className="project-btns">
-                  <a
-                    href={proj.code}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-btn github-btn"
-                  >
-                    <FaGithub className="github-icon" />
-                    GitHub
-                  </a>
+                  {proj.live && (
+                    <a
+                      href={proj.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-btn live-btn"
+                    >
+                      <FiExternalLink className="live-icon" />
+                      Live Demo
+                    </a>
+                  )}
+                  {proj.code && (
+                    <a
+                      href={proj.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-btn github-btn"
+                    >
+                      <FaGithub className="github-icon" />
+                      GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </motion.div>

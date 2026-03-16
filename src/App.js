@@ -5,6 +5,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 import './index.css';
 
@@ -38,6 +39,7 @@ function App() {
         <section id="skills"><Skills theme={theme} /></section>
         <section id="projects"><Projects theme={theme} /></section>
         <section id="experience"><Experience theme={theme} /></section>
+        <section id="achievements"><Achievements theme={theme} /></section>
         <section id="contact"><Contact theme={theme} /></section>
       </div>
     </>

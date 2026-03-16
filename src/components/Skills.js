@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import { FaReact, FaNodeJs, FaPython, FaHtml5, FaCss3Alt, FaJsSquare } from 'react-icons/fa';
-import { SiCplusplus, SiMongodb, SiExpress, SiNextdotjs, SiMysql, SiAssemblyscript } from 'react-icons/si';
+import { SiCplusplus, SiExpress, SiNextdotjs, SiAssemblyscript, SiTypescript,  SiSqlite,  SiPytorch } from 'react-icons/si';
 import { motion } from 'framer-motion';
 import './Skills.css';
 
 const skills = [
-  { name: "React", icon: <FaReact color="#61DBFB" />, percentage: 85 },
-  { name: "Node.js", icon: <FaNodeJs color="#8CC84B" />, percentage: 90 },
-  { name: "Python", icon: <FaPython color="#3776AB" />, percentage: 96 },
+  { name: "React", icon: <FaReact color="#61DBFB" />, percentage: 75 },
+  { name: "Node.js", icon: <FaNodeJs color="#8CC84B" />, percentage: 70 },
+  { name: "Python", icon: <FaPython color="#3776AB" />, percentage: 66 },
   { name: "C++", icon: <SiCplusplus color="#00599C" />, percentage: 61 },
-  { name: "HTML", icon: <FaHtml5 color="#E34F26" />, percentage: 96 },
+  { name: "HTML", icon: <FaHtml5 color="#E34F26" />, percentage: 76 },
   { name: "CSS", icon: <FaCss3Alt color="#1572B6" />, percentage: 70 },
-  { name: "JavaScript", icon: <FaJsSquare color="#F7DF1E" />, percentage: 85 },
-  { name: "MongoDB", icon: <SiMongodb color="#47A248" />, percentage: 87 },
-  { name: "Assembly", icon: <SiAssemblyscript color="#FF6B6B" />, percentage: 85 },
-  { name: "Express.js", icon: <SiExpress color="#68D391" />, percentage: 89 },
-  { name: "Next.js", icon: <SiNextdotjs color="#000000" />, percentage: 88 },
-  { name: "MySQL", icon: <SiMysql color="#E97627" />, percentage: 82 },
+  { name: "JavaScript", icon: <FaJsSquare color="#F7DF1E" />, percentage: 75 },
+  { name: "TypeScript", icon: <SiTypescript color="#3178C6" />, percentage: 72 },
+  { name: "Assembly", icon: <SiAssemblyscript color="#FF6B6B" />, percentage: 75 },
+  { name: "Express.js", icon: <SiExpress color="#68D391" />, percentage: 79 },
+  { name: "Next.js", icon: <SiNextdotjs color="#000000" />, percentage: 78 },
+  { name: "SQLite", icon: <SiSqlite color="#003B57" />, percentage: 70 },
+  { name: "PyTorch", icon: <SiPytorch color="#EE4C2C" />, percentage: 73 },
   { name: "Solidity", icon: <FaPython color="#363636" />, percentage: 75 },
-  { name: "Web3.js", icon: <FaJsSquare color="#F7DF1E" />, percentage: 70 },
   { name: "Verilog", icon: <SiCplusplus color="#00599C" />, percentage: 60 },
   { name: "Git", icon: <FaJsSquare color="#F05032" />, percentage: 85 },
 ];

@@ -21,7 +21,7 @@ body.dark .experience-section {
   font-size: 2.2rem;
   font-weight: 700;
   color: #23243a;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
   text-align: center;
@@ -93,7 +93,7 @@ body.dark .timeline-card:hover {
   font-size: 1.4rem;
   font-weight: 700;
   color: #23243a;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin: 0 0 0.5rem 0;
   line-height: 1.3;
 }
@@ -107,7 +107,7 @@ body.dark .role {
   font-size: 1.1rem;
   font-weight: 600;
   color: #38bdf8;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin-bottom: 0.3rem;
 }
 
@@ -120,7 +120,7 @@ body.dark .company {
   font-size: 0.95rem;
   font-weight: 500;
   color: #64748b;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin-bottom: 1rem;
   font-style: italic;
 }
@@ -132,13 +132,69 @@ body.dark .duration {
 .description {
   font-size: 1rem;
   color: #475569;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.6;
   margin: 0;
 }
 
 body.dark .description {
   color: #cbd5e1;
+}
+
+/* Research Experience Styles */
+.research-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1e293b;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+body.dark .research-title {
+  color: #e0e7ff;
+}
+
+.research-points {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+}
+
+.research-points li {
+  font-size: 0.98rem;
+  color: #475569;
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.research-points li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+body.dark .research-points li {
+  color: #cbd5e1;
+}
+
+body.dark .research-points li::before {
+  color: #6cb6ff;
+}
+
+.research-card {
+  background: rgba(248, 250, 252, 0.8);
+}
+
+body.dark .research-card {
+  background: rgba(30, 32, 48, 0.7);
 }
 
 @media (max-width: 768px) {
@@ -161,5 +217,14 @@ body.dark .description {
   
   .description {
     font-size: 0.95rem;
+  }
+
+  .research-title {
+    font-size: 0.95rem;
+  }
+
+  .research-points li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
   }
 }

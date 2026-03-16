@@ -49,7 +49,7 @@ body.dark .about-section:hover {
   font-size: 2.5rem;
   font-weight: 800;
   color: #23243a;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin-bottom: 1.5rem;
   letter-spacing: -0.5px;
   position: relative;
@@ -62,7 +62,7 @@ body.dark .about-heading {
 .about-paragraph {
   font-size: 1.15rem;
   color: #1e293b;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.8;
   font-weight: 400;
 }

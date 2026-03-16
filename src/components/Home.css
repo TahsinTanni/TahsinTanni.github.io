@@ -56,7 +56,7 @@ body.dark .hero-bg:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin-bottom: 1.5rem;
   letter-spacing: -1px;
   line-height: 1.2;
@@ -75,7 +75,7 @@ body.dark .hero-title {
   color: #23243a;
   min-height: 2.8rem;
   letter-spacing: 0.5px;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   display: flex;
   align-items: center;
   margin-bottom: 2.5rem;

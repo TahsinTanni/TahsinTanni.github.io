@@ -18,7 +18,7 @@ body.dark .projects-section {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   text-align: center;
   color: #23243a;
 }
@@ -105,6 +105,9 @@ body.dark .project-img {
 .project-info {
   width: 100%;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-title {
@@ -112,7 +115,7 @@ body.dark .project-img {
   font-weight: 700;
   color: #23243a;
   margin-bottom: 0.5rem;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 body.dark .project-title {
@@ -123,7 +126,7 @@ body.dark .project-title {
   font-size: 1.05rem;
   color: #23243a;
   margin-bottom: 0.7rem;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   line-height: 1.6;
 }
 
@@ -146,7 +149,7 @@ body.dark .project-desc {
   border-radius: 14px;
   padding: 0.35rem 1rem;
   box-shadow: 0 2px 12px rgba(108,99,255,0.08);
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.5px;
   transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s cubic-bezier(.4,2,.3,1);
   cursor: default;
@@ -176,15 +179,16 @@ body.dark .tech-tag:hover {
 
 .project-btns {
   display: flex;
-  gap: 1rem;
-  margin-top: 0.7rem;
+  gap: 5.5rem;
+  margin-top: auto;
+  padding-top: 0.7rem;
 }
 
 .project-btn {
   background: linear-gradient(90deg, #6cb6ff 0%, #38bdf8 100%);
   color: #fff;
-  padding: 0.5rem 1.2rem;
-  border-radius: 16px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
   font-weight: 600;
   border: none;
   font-size: 1rem;
@@ -193,13 +197,28 @@ body.dark .tech-tag:hover {
   cursor: pointer;
   outline: none;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .project-btn:hover {
   background: linear-gradient(90deg, #38bdf8 0%, #6cb6ff 100%);
-  transform: scale(1.07);
+  transform: translateY(-2px);
   box-shadow: 0 4px 18px #38bdf844;
+}
+
+.live-btn {
+  background: linear-gradient(90deg, #38bdf8 0%, #6cb6ff 100%);
+}
+
+.live-btn:hover {
+  background: linear-gradient(90deg, #6cb6ff 0%, #38bdf8 100%);
+}
+
+.live-icon {
+  font-size: 1.2rem;
 }
 
 .github-btn {

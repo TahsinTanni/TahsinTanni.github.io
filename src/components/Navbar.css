@@ -23,7 +23,7 @@ body.dark .navbar {
   font-size: 1.8rem;
   color: #f1f5f9;
   font-weight: 700;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   letter-spacing: 1.5px;
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
@@ -50,7 +50,7 @@ body.dark .navbar-logo {
   font-weight: 600;
   transition: all 0.3s ease;
   cursor: pointer;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -208,7 +208,7 @@ body.dark .mobile-menu {
   cursor: pointer;
   width: 100%;
   text-align: left;
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   box-shadow: 0 2px 8px rgba(40,60,90,0.08);
 }
 
