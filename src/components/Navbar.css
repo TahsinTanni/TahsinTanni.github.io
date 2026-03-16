@@ -180,6 +180,7 @@ body.dark .hamburger span {
   padding: 3rem 1.5rem;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  box-sizing: border-box;
 }
 
 body.dark .mobile-menu {
@@ -234,6 +235,42 @@ body.dark .mobile-menu li button.active {
   color: #e3e6fd;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   border-color: transparent;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2.2rem;
+  color: #23243a;
+  cursor: pointer;
+  z-index: 10;
+  padding: 0.2rem 0.5rem;
+  transition: color 0.2s, background 0.2s;
+  border-radius: 50%;
+}
+
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
+  background: #f6f8fb;
+  color: #38bdf8;
+}
+
+body.dark .mobile-menu-close {
+  color: #e3e6fd;
+}
+
+body.dark .mobile-menu-close:hover,
+body.dark .mobile-menu-close:focus {
+  background: #23243a;
+  color: #38bdf8;
+}
+
+.close-icon {
+  display: block;
+  line-height: 1;
 }
 
 /* Responsive */

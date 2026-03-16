@@ -103,6 +103,13 @@ function Navbar({ theme, setTheme, scrollToSection }) {
             exit={{ x: '100%' }}
             transition={{ type: 'spring', stiffness: 300, damping: 30 }}
           >
+            <button
+              className="mobile-menu-close"
+              aria-label="Close menu"
+              onClick={() => setMobileOpen(false)}
+            >
+              <span className="close-icon">&times;</span>
+            </button>
             <ul>
               {NAV_LINKS.map(link => (
                 <li key={link.id}>
