@@ -66,7 +66,7 @@ function Projects() {
   const carouselRef = useRef(null);
   const [scrollIndex, setScrollIndex] = useState(0);
 
-  const cardsPerView = 2;
+  const cardsPerView = 1;
   const totalCards = projects.length + 1; // +1 for See More card
   const maxIndex = Math.ceil(totalCards / cardsPerView) - 1;
 

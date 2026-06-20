@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
-import cvFile from '../assets/CV_Tahsin copy.pdf';
-const tagline = "Undergraduate CSE Student | ML Enthusiast & Aspiring Web/Full-Stack Developer";
+import cvFile from '../assets/Tahsin_Tajwar_Tanni_CV.pdf';
+const tagline = "AI Automation Engineer • ML Researcher • Full-Stack Developer";
 
 function Typing({ text }) {
   const [typed, setTyped] = useState('');
