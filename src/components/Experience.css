@@ -146,6 +146,7 @@
 
 @media (max-width: 768px) {
   .timeline-card {
+    grid-template-columns: 24px 1fr;
     gap: 12px;
   }
   
@@ -171,37 +172,5 @@
 
   .research-points li {
     font-size: 11px;
-  }
-}
-
-@media (max-width: 768px) {
-  .timeline-card {
-    padding: 1.2rem;
-    gap: 1rem;
-  }
-  
-  .role {
-    font-size: 1.2rem;
-  }
-  
-  .company {
-    font-size: 1rem;
-  }
-  
-  .duration {
-    font-size: 0.9rem;
-  }
-  
-  .description {
-    font-size: 0.95rem;
-  }
-
-  .research-title {
-    font-size: 0.95rem;
-  }
-
-  .research-points li {
-    font-size: 0.9rem;
-    padding-left: 1.2rem;
   }
 }

@@ -83,3 +83,11 @@ h2, h3, .section-title, .skills-heading, .projects-heading, .experience-heading,
 .mobile-menu li button {
   font-size: 13px !important;
 }
+
+@media (max-width: 768px) {
+  :root {
+    --page-padding-vertical: 20px;
+    --page-padding-horizontal: 16px;
+    --section-gap: 24px;
+  }
+}

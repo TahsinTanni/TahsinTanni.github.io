@@ -131,40 +131,34 @@ body.dark .mobile-menu {
   border-left: 1px solid var(--border);
 }
 
-/* Left-edge arrow tab close button */
+/* Top-right close button inside mobile menu */
 .mobile-menu-close {
   position: absolute;
-  left: -22px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 22px;
-  height: 60px;
-  background: var(--card);
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   border: 1px solid var(--border);
-  border-radius: 8px 0 0 8px;
+  background: var(--card);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 40;
   padding: 0;
-  transition: background 0.2s, width 0.2s;
+  transition: all 0.2s ease;
+  color: var(--text);
 }
 
 .mobile-menu-close:hover,
 .mobile-menu-close:focus {
-  background: var(--acc);
-  width: 26px;
-  left: -26px;
+  background: var(--tag-bg);
+  border-color: var(--text);
 }
 
-.mobile-menu-close svg polyline {
+.mobile-menu-close svg {
   stroke: var(--text) !important;
-}
-
-.mobile-menu-close:hover svg polyline,
-.mobile-menu-close:focus svg polyline {
-  stroke: var(--acc-text) !important;
 }
 
 body.dark .mobile-menu-close {
@@ -173,7 +167,7 @@ body.dark .mobile-menu-close {
 
 body.dark .mobile-menu-close:hover,
 body.dark .mobile-menu-close:focus {
-  background: var(--acc);
+  background: var(--tag-bg);
 }
 
 .mobile-menu ul {
@@ -262,7 +256,7 @@ body.dark .mobile-menu li button.active {
   
   .mobile-menu {
     width: 80vw;
-    padding: 2.5rem 1.2rem;
+    padding: 4.5rem 1.2rem 1.5rem 1.2rem;
   }
   
   .mobile-menu li button {
