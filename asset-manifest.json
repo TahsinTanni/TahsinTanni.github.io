@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.a73da6fe.css",
-    "main.js": "/static/js/main.dd179ef2.js",
+    "main.css": "/static/css/main.4d884f64.css",
+    "main.js": "/static/js/main.1cc0d75b.js",
     "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
+    "static/media/vae-clustering.jpg": "/static/media/vae-clustering.5a2000fe9696ae262275.jpg",
+    "static/media/stock-forecasting.jpg": "/static/media/stock-forecasting.1685dc10baf804920138.jpg",
+    "static/media/disaster-recovery.jpg": "/static/media/disaster-recovery.441f9af85d8e95c30167.jpg",
+    "static/media/cinemetrics.jpg": "/static/media/cinemetrics.aec789cca90142218ea2.jpg",
+    "static/media/property-tracker.jpg": "/static/media/property-tracker.9685ea6de5a5f4fe2185.jpg",
+    "static/media/thesis-flow.png": "/static/media/thesis-flow.448920cb4c5f42070fb5.png",
     "static/media/placeholder.jpg": "/static/media/placeholder.e331a25bc2a12ed9dac8.jpg",
+    "static/media/collab-playlist.png": "/static/media/collab-playlist.ca18c39af23d0b09239a.png",
     "static/media/Tahsin_Tajwar_Tanni_CV.pdf": "/static/media/Tahsin_Tajwar_Tanni_CV.ee78b45f28e4cfbfb6e5.pdf",
+    "static/media/ai-professor-finder.png": "/static/media/ai-professor-finder.d9dc0647d1d532aca7e0.png",
     "index.html": "/index.html",
-    "main.a73da6fe.css.map": "/static/css/main.a73da6fe.css.map",
-    "main.dd179ef2.js.map": "/static/js/main.dd179ef2.js.map",
+    "main.4d884f64.css.map": "/static/css/main.4d884f64.css.map",
+    "main.1cc0d75b.js.map": "/static/js/main.1cc0d75b.js.map",
     "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a73da6fe.css",
-    "static/js/main.dd179ef2.js"
+    "static/css/main.4d884f64.css",
+    "static/js/main.1cc0d75b.js"
   ]
 }
