@@ -67,6 +67,7 @@ function Experience() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.4 }}
               variants={cardVariants}
+              whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(56, 189, 248, 0.3)" }}
             >
               <div className="timeline-dot" />
               <div className="timeline-content">
@@ -90,6 +91,7 @@ function Experience() {
             viewport={{ once: true, amount: 0.4 }}
             variants={cardVariants}
             custom={0}
+            whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(56, 189, 248, 0.3)" }}
           >
             <div className="timeline-dot" />
             <div className="timeline-content">

@@ -2,28 +2,52 @@ import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Projects.css';
 import placeholder from '../assets/placeholder.jpg';
+import thesisFlowImg from '../assets/thesis-flow.png';
+import stockForecastingImg from '../assets/stock-forecasting.jpg';
+import aiProfessorFinderImg from '../assets/ai-professor-finder.png';
+import collabPlaylistImg from '../assets/collab-playlist.png';
+import cineMetricsImg from '../assets/cinemetrics.jpg';
+import vaeClusteringImg from '../assets/vae-clustering.jpg';
+import disasterRecoveryImg from '../assets/disaster-recovery.jpg';
+import propertyTrackerImg from '../assets/property-tracker.jpg';
 import { FiExternalLink, FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
+
+/* 
+  HOW TO UPLOAD PICTURES FOR PROJECTS:
+  1. Place your project image in the `src/assets/` directory (e.g., `src/assets/my-project-img.jpg`).
+  2. Import the image at the top of this file:
+     import myProjectImg from '../assets/my-project-img.jpg';
+  3. Replace the `placeholder` value for your project in the array below with the imported image variable:
+     image: myProjectImg,
+*/
 
 const projects = [
   {
     title: "ThesisFlow - Thesis Management System",
-    image: placeholder,
+    image: thesisFlowImg,
     description: "A web application to manage thesis submissions, reviews, and approvals. Features include student-supervisor collaboration, document management, progress tracking, and automated workflow for thesis evaluation and defense scheduling.",
     tech: ["React", "Express", "MongoDB", "Node.js"],
     code: "https://github.com/Faishal-Monir/Thesis-Management-System",
     live: "https://thesis-flow-delta.vercel.app/"
   },
   {
-    title: "DataSynthis Job Task — Hugging Face Space",
-    image: placeholder,
+    title: "Stock-Forecasting-and-Analysis-Toolkit",
+    image: stockForecastingImg,
     description: "Developed an interactive Hugging Face Space demonstrating data synthesis using generative AI techniques for job-related analytics. Enabled dynamic user interaction for synthetic data generation and visualization through a web-based interface.",
     tech: ["pandas", "numpy", "matplotlib", "statsmodels", "scikit-learn", "prophet", "tensorflow", "gradio", "Hugging Face Hub"],  
     live: "https://huggingface.co/spaces/tahsintajwar/DataSynthis_Job_task"
   },
   {
+    title: "AI Professor Finder",
+    image: aiProfessorFinderImg,
+    description: "An automated n8n workflow that discovers and evaluates potential MSc/PhD supervisors using Google Scholar and Gemini AI. The workflow reads professor information from Google Sheets, retrieves their recent publications via SerpAPI, compares their research against a student's thesis, and produces AI-generated compatibility scores and funding recommendations.",
+    tech: ["n8n", "Google Scholar", "SerpAPI", "Gemini AI", "Google Sheets"],
+    code: "https://github.com/TahsinTanni/AI-Professor-Finder"
+  },
+  {
     title: "Realtime Collaborative Playlist",
-    image: placeholder,
+    image: collabPlaylistImg,
     description: "Built a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
     tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
     code: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
@@ -32,21 +56,21 @@ const projects = [
   
   {
     title: "CineMetrics – MLproject",
-    image: placeholder,
+    image: cineMetricsImg,
     description: "A machine learning project designed to empower film producers and stakeholders with predictive insights into audience response.",
     tech: ["pandas", "NumPy", "scikit-learn", "matplotlib", "seaborn"],
     code: "https://github.com/TahsinTanni/CineMetrics_MLproject"
   },
   {
     title: "VAE-based Deep Clustering with Uncertainty",
-    image: placeholder,
+    image: vaeClusteringImg,
     description: "Research project on deep clustering using Variational Autoencoders with uncertainty quantification. Implements advanced neural network architectures for unsupervised learning and cluster analysis with probabilistic modeling.",
     tech: ["Python", "TensorFlow", "Keras", "scikit-learn", "pyTorch"],
     code: "https://github.com/TahsinTanni/vae-dec-clustering-uncertainty"
   },
   {
     title: "Disaster Recovery Training Smart Contract",
-    image: placeholder,
+    image: disasterRecoveryImg,
     description: "Smart contract for managing disaster recovery training programs on the Ethereum blockchain. Enables transparent tracking of training sessions, certification issuance, and participant verification with decentralized record-keeping.",
     tech: ["Solidity", "Ethereum", "Web3.js", "Metamask"],
     code: "https://github.com/TahsinTanni/Disaster-Recovery-Training-Smart-Contract"
@@ -54,7 +78,7 @@ const projects = [
   
   {
     title: "Property Tracker",
-    image: placeholder,
+    image: propertyTrackerImg,
     description: "A web application to track property prices, market trends, and real estate analytics. Built on Hyperledger Fabric blockchain for secure and immutable property transaction records and ownership history.",
     tech: ["React", "Express", "MongoDB", "Node.js", "Hyperledger Fabric"],
     code: "https://github.com/TahsinTanni/property-tracker-fabric"
@@ -118,7 +142,9 @@ function Projects() {
               transition={{ delay: i * 0.1 }}
             >
               <div className="project-img-wrap">
-                <img src={proj.image} alt={proj.title} className="project-img" />
+                {proj.image && proj.image !== placeholder && (
+                  <img src={proj.image} alt={proj.title} className="project-img" />
+                )}
               </div>
               <div className="project-info">
                 <h3 className="project-title">{proj.title}</h3>

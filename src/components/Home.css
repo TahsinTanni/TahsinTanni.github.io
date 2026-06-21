@@ -39,7 +39,7 @@
   flex-shrink: 0 !important;
   display: flex !important;
   justify-content: flex-end !important;
-  align-items: flex-start !important;
+  align-items: center !important;
 }
 
 .profile-pic {
@@ -50,6 +50,7 @@
   border-radius: 12px !important;
   box-shadow: none !important;
   border: none !important;
+  margin-top: 24px !important;
 }
 
 .hero-btns {

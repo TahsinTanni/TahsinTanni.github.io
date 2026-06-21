@@ -7,11 +7,12 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Achievements from './components/Achievements';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import './index.css';
 
 function getInitialTheme() {
   const saved = localStorage.getItem('theme');
-  return saved ? saved : 'light';
+  return saved ? saved : 'dark';
 }
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <section id="achievements"><Achievements theme={theme} /></section>
         <section id="contact"><Contact theme={theme} /></section>
       </div>
+      <Footer theme={theme} />
     </>
   );
 }
