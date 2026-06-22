@@ -35,7 +35,8 @@ const projects = [
     title: "ProfMail - AI-Powered Academic Cold Email Generator",
     image: profMailImg,
     description: "An AI-driven web application that automates personalized cold email generation for graduate school applicants. Features include real-time professor lab scraping, research overlap analysis between student thesis and faculty publications, customizable tone and length controls, and an interactive editing workspace with local email history.",
-    tech: ["AI", "Web Scraping", "Research Analysis", "Email Automation"],
+    tech: ["React", "TypeScript", "Vite 6", "Tailwind CSS", "AI", "Web Scraping"],
+    code: "https://github.com/TahsinTanni/ProfMail",
     live: "https://prof-mail.vercel.app/"
   },
   {
