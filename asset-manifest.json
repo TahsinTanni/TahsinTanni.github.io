@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.4d884f64.css",
-    "main.js": "/static/js/main.1cc0d75b.js",
+    "main.js": "/static/js/main.1fad28f6.js",
     "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
+    "static/media/profmail.png": "/static/media/profmail.c5b58052300dc52820a1.png",
     "static/media/vae-clustering.jpg": "/static/media/vae-clustering.5a2000fe9696ae262275.jpg",
     "static/media/stock-forecasting.jpg": "/static/media/stock-forecasting.1685dc10baf804920138.jpg",
     "static/media/disaster-recovery.jpg": "/static/media/disaster-recovery.441f9af85d8e95c30167.jpg",
-    "static/media/cinemetrics.jpg": "/static/media/cinemetrics.aec789cca90142218ea2.jpg",
     "static/media/property-tracker.jpg": "/static/media/property-tracker.9685ea6de5a5f4fe2185.jpg",
     "static/media/thesis-flow.png": "/static/media/thesis-flow.448920cb4c5f42070fb5.png",
     "static/media/placeholder.jpg": "/static/media/placeholder.e331a25bc2a12ed9dac8.jpg",
@@ -15,11 +15,11 @@
     "static/media/ai-professor-finder.png": "/static/media/ai-professor-finder.d9dc0647d1d532aca7e0.png",
     "index.html": "/index.html",
     "main.4d884f64.css.map": "/static/css/main.4d884f64.css.map",
-    "main.1cc0d75b.js.map": "/static/js/main.1cc0d75b.js.map",
+    "main.1fad28f6.js.map": "/static/js/main.1fad28f6.js.map",
     "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d884f64.css",
-    "static/js/main.1cc0d75b.js"
+    "static/js/main.1fad28f6.js"
   ]
 }
