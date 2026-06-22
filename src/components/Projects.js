@@ -6,7 +6,7 @@ import thesisFlowImg from '../assets/thesis-flow.png';
 import stockForecastingImg from '../assets/stock-forecasting.jpg';
 import aiProfessorFinderImg from '../assets/ai-professor-finder.png';
 import collabPlaylistImg from '../assets/collab-playlist.png';
-import cineMetricsImg from '../assets/cinemetrics.jpg';
+import profMailImg from '../assets/profmail.png';
 import vaeClusteringImg from '../assets/vae-clustering.jpg';
 import disasterRecoveryImg from '../assets/disaster-recovery.jpg';
 import propertyTrackerImg from '../assets/property-tracker.jpg';
@@ -32,11 +32,11 @@ const projects = [
     live: "https://thesis-flow-delta.vercel.app/"
   },
   {
-    title: "Stock-Forecasting-and-Analysis-Toolkit",
-    image: stockForecastingImg,
-    description: "Developed an interactive Hugging Face Space demonstrating data synthesis using generative AI techniques for job-related analytics. Enabled dynamic user interaction for synthetic data generation and visualization through a web-based interface.",
-    tech: ["pandas", "numpy", "matplotlib", "statsmodels", "scikit-learn", "prophet", "tensorflow", "gradio", "Hugging Face Hub"],  
-    live: "https://huggingface.co/spaces/tahsintajwar/DataSynthis_Job_task"
+    title: "ProfMail - AI-Powered Academic Cold Email Generator",
+    image: profMailImg,
+    description: "An AI-driven web application that automates personalized cold email generation for graduate school applicants. Features include real-time professor lab scraping, research overlap analysis between student thesis and faculty publications, customizable tone and length controls, and an interactive editing workspace with local email history.",
+    tech: ["AI", "Web Scraping", "Research Analysis", "Email Automation"],
+    live: "https://prof-mail.vercel.app/"
   },
   {
     title: "AI Professor Finder",
@@ -46,20 +46,19 @@ const projects = [
     code: "https://github.com/TahsinTanni/AI-Professor-Finder"
   },
   {
+    title: "Stock-Forecasting-and-Analysis-Toolkit",
+    image: stockForecastingImg,
+    description: "Developed an interactive Hugging Face Space demonstrating data synthesis using generative AI techniques for job-related analytics. Enabled dynamic user interaction for synthetic data generation and visualization through a web-based interface.",
+    tech: ["pandas", "numpy", "matplotlib", "statsmodels", "scikit-learn", "prophet", "tensorflow", "gradio", "Hugging Face Hub"],  
+    live: "https://huggingface.co/spaces/tahsintajwar/DataSynthis_Job_task"
+  },
+  {
     title: "Realtime Collaborative Playlist",
     image: collabPlaylistImg,
     description: "Built a real-time collaborative music playlist application with Server-Sent Events (SSE) for live synchronization, drag-and-drop reordering using fractional indexing, voting system, and now playing simulation.",
     tech: ["Next.js 16", "React 19", "TypeScript", "Prisma ORM", "SQLite", "Tailwind CSS 4", "Framer Motion"],
     code: "https://github.com/Nafiz68/Realtime-Collaborative-Playlist",
     live: "https://realtime-collaborative-playlist.vercel.app/"
-  },
-  
-  {
-    title: "CineMetrics – MLproject",
-    image: cineMetricsImg,
-    description: "A machine learning project designed to empower film producers and stakeholders with predictive insights into audience response.",
-    tech: ["pandas", "NumPy", "scikit-learn", "matplotlib", "seaborn"],
-    code: "https://github.com/TahsinTanni/CineMetrics_MLproject"
   },
   {
     title: "VAE-based Deep Clustering with Uncertainty",
