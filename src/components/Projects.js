@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Projects.css';
-import placeholder from '../assets/placeholder.jpg';
 import thesisFlowImg from '../assets/thesis-flow.png';
 import stockForecastingImg from '../assets/stock-forecasting.jpg';
 import aiProfessorFinderImg from '../assets/ai-professor-finder.png';
@@ -12,15 +11,6 @@ import disasterRecoveryImg from '../assets/disaster-recovery.jpg';
 import propertyTrackerImg from '../assets/property-tracker.jpg';
 import { FiExternalLink, FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
-
-/* 
-  HOW TO UPLOAD PICTURES FOR PROJECTS:
-  1. Place your project image in the `src/assets/` directory (e.g., `src/assets/my-project-img.jpg`).
-  2. Import the image at the top of this file:
-     import myProjectImg from '../assets/my-project-img.jpg';
-  3. Replace the `placeholder` value for your project in the array below with the imported image variable:
-     image: myProjectImg,
-*/
 
 const projects = [
   {
@@ -142,7 +132,7 @@ function Projects() {
               transition={{ delay: i * 0.1 }}
             >
               <div className="project-img-wrap">
-                {proj.image && proj.image !== placeholder && (
+                {proj.image && (
                   <img src={proj.image} alt={proj.title} className="project-img" />
                 )}
               </div>
