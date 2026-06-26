@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d884f64.css",
-    "main.js": "/static/js/main.565631db.js",
+    "main.css": "/static/css/main.c463a1c4.css",
+    "main.js": "/static/js/main.7560639e.js",
     "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
     "static/media/profmail.png": "/static/media/profmail.c5b58052300dc52820a1.png",
     "static/media/vae-clustering.jpg": "/static/media/vae-clustering.5a2000fe9696ae262275.jpg",
@@ -13,12 +13,12 @@
     "static/media/ai-professor-finder.png": "/static/media/ai-professor-finder.d9dc0647d1d532aca7e0.png",
     "static/media/Tahsin_Tajwar_Tanni_CV.pdf": "/static/media/Tahsin_Tajwar_Tanni_CV.9dcb0648e9b82f224f85.pdf",
     "index.html": "/index.html",
-    "main.4d884f64.css.map": "/static/css/main.4d884f64.css.map",
-    "main.565631db.js.map": "/static/js/main.565631db.js.map",
+    "main.c463a1c4.css.map": "/static/css/main.c463a1c4.css.map",
+    "main.7560639e.js.map": "/static/js/main.7560639e.js.map",
     "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d884f64.css",
-    "static/js/main.565631db.js"
+    "static/css/main.c463a1c4.css",
+    "static/js/main.7560639e.js"
   ]
 }
