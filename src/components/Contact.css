@@ -1,57 +1,73 @@
 .contact-section {
   background: var(--card) !important;
   border: 1px solid var(--border) !important;
-  border-radius: 12px !important;
-  padding: 32px !important;
+  border-radius: 16px !important;
+  padding: 0 !important;
   margin: var(--section-gap) auto !important;
   max-width: 900px !important;
   box-sizing: border-box !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18) !important;
 }
 
-.contact-heading {
+.contact-section .contact-heading {
   font-size: 22px !important;
   font-weight: 600 !important;
-  color: var(--text) !important;
-  margin-bottom: 24px !important;
-  text-transform: none !important;
-  letter-spacing: 0 !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  color: var(--sub) !important;
   display: flex !important;
   align-items: center !important;
   gap: 12px !important;
+  margin: 0 0 20px 0 !important;
+  font-family: 'DM Sans', sans-serif !important;
 }
 
-.contact-heading::after {
+.contact-section .contact-heading::after {
   content: '' !important;
   flex: 1 !important;
   height: 1px !important;
   background: var(--border) !important;
 }
 
+.contact-subheading {
+  color: var(--sub) !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  margin: 0 0 28px 0 !important;
+  max-width: 560px !important;
+}
+
 .contact-content {
-  display: flex !important;
-  flex-direction: row !important;
-  gap: 48px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.9fr) !important;
+  gap: 0 !important;
 }
 
 .contact-left {
-  flex: 1.2 !important;
+  padding: 36px 32px !important;
+  min-width: 0 !important;
 }
 
 .contact-right {
-  flex: 1 !important;
   display: flex !important;
   flex-direction: column !important;
+  justify-content: center !important;
   gap: 0 !important;
+  padding: 36px 30px !important;
+  background: rgba(0, 0, 0, 0.14) !important;
+  border-left: 1px solid var(--border) !important;
+  min-width: 0 !important;
 }
 
 .contact-form {
   display: flex !important;
   flex-direction: column !important;
-  gap: 16px !important;
+  gap: 14px !important;
 }
 
 .contact-input {
-  padding: 12px 16px !important;
+  padding: 13px 16px !important;
   border-radius: 8px !important;
   border: 1px solid var(--border) !important;
   font-size: 14px !important;
@@ -63,7 +79,7 @@
 }
 
 .contact-textarea {
-  min-height: 120px !important;
+  min-height: 148px !important;
   resize: vertical !important;
 }
 
@@ -81,19 +97,21 @@ body.dark .contact-textarea:focus {
 .contact-btn {
   background: var(--acc) !important;
   color: var(--acc-text) !important;
-  padding: 12px 24px !important;
+  padding: 13px 28px !important;
   border-radius: 8px !important;
   font-weight: 500 !important;
   border: none !important;
   font-size: 14px !important;
   cursor: pointer !important;
   font-family: 'DM Sans', sans-serif !important;
-  transition: opacity 0.2s ease !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
   align-self: flex-start !important;
+  margin-top: 4px !important;
 }
 
 .contact-btn:hover {
   opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
 }
 
 .contact-btn:disabled {
@@ -104,10 +122,12 @@ body.dark .contact-textarea:focus {
 /* Contact methods on the right */
 .contact-method {
   display: grid !important;
-  grid-template-columns: 44px 80px 1fr !important;
-  gap: 16px !important;
-  align-items: center !important;
-  padding: 16px 0 !important;
+  grid-template-columns: 38px minmax(0, 1fr) !important;
+  column-gap: 14px !important;
+  row-gap: 3px !important;
+  align-items: start !important;
+  padding: 0 0 22px 0 !important;
+  margin-bottom: 22px !important;
   border-bottom: 1px solid var(--border) !important;
 }
 
@@ -116,15 +136,16 @@ body.dark .contact-textarea:focus {
 }
 
 .contact-icon {
+  grid-row: 1 / span 2 !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 44px !important;
-  height: 44px !important;
+  width: 38px !important;
+  height: 38px !important;
   border-radius: 50% !important;
-  background: var(--tag-bg) !important;
-  color: var(--text) !important;
-  border: 1px solid var(--border) !important;
+  background: color-mix(in srgb, var(--acc) 12%, transparent) !important;
+  color: var(--acc) !important;
+  border: none !important;
   transition: background 0.2s, color 0.2s, border-color 0.2s !important;
   flex-shrink: 0 !important;
   box-sizing: border-box !important;
@@ -137,19 +158,21 @@ body.dark .contact-textarea:focus {
 }
 
 .contact-label {
-  font-size: 13px !important;
+  align-self: start !important;
+  font-size: 12px !important;
   font-weight: 500 !important;
   color: var(--sub) !important;
   font-family: 'DM Sans', sans-serif !important;
 }
 
 .contact-link {
+  align-self: start !important;
   font-size: 14px !important;
   color: var(--text) !important;
   text-decoration: none !important;
   font-family: 'DM Sans', sans-serif !important;
   transition: color 0.2s ease !important;
-  word-break: break-all !important;
+  word-break: break-word !important;
 }
 
 .contact-link:hover {
@@ -181,27 +204,34 @@ body.dark .contact-textarea:focus {
 /* Responsiveness */
 @media (max-width: 768px) {
   .contact-content {
-    flex-direction: column !important;
-    gap: 32px !important;
+    grid-template-columns: 1fr !important;
   }
   
   .contact-section {
-    padding: 24px !important;
+    border-radius: 14px !important;
+  }
+
+  .contact-left,
+  .contact-right {
+    padding: 32px 24px !important;
+  }
+
+  .contact-right {
+    border-left: none !important;
+    border-top: 1px solid var(--border) !important;
   }
 
   .contact-method {
-    grid-template-columns: 44px 80px 1fr !important;
-    padding: 12px 0 !important;
+    grid-template-columns: 38px minmax(0, 1fr) !important;
   }
 }
 
 @media (max-width: 480px) {
   .contact-method {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 8px !important;
-    padding: 16px 0 !important;
+    display: grid !important;
+    grid-template-columns: 38px minmax(0, 1fr) !important;
+    align-items: start !important;
+    column-gap: 12px !important;
   }
   
   .contact-label {

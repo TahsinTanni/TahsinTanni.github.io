@@ -112,7 +112,22 @@
   color: var(--text);
   font-family: 'DM Sans', sans-serif;
   line-height: 1.5;
-  margin: 8px 0;
+  margin: 8px 0 6px 0;
+}
+
+.research-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--acc);
+  font-size: 12px;
+  font-weight: 500;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  margin-bottom: 4px;
+}
+
+.research-link:hover {
+  text-decoration: underline;
 }
 
 .research-points {
@@ -171,6 +186,10 @@
   }
 
   .research-points li {
+    font-size: 11px;
+  }
+
+  .research-link {
     font-size: 11px;
   }
 }

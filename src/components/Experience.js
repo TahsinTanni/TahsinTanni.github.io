@@ -34,6 +34,7 @@ const researchExperience = {
   company: "BRAC University, Department of Computer Science and Engineering",
   duration: "January 2025 – January 2026",
   title: "Anchor-guided repair: A Defense Mechanism for Enhancing Stability of Compromised Pretrained Language Models Against Low-Precision and Weight Noise Attacks",
+  publicationUrl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JfVqCU8AAAAJ&authuser=1&citation_for_view=JfVqCU8AAAAJ:9yKSN-GCB0IC",
   points: [
     "Large Language Models (LLMs) are vulnerable to post-release attacks such as weight noise injection and low-precision quantization, which degrade stability and performance. Users may unknowingly download compromised models without access to clean weights.",
     "We propose Anchor-Guided Repair, a defense that fine-tunes attacked models on clean text while limiting parameter changes via an anchor loss that penalizes deviation from a clean, task-adapted baseline.",
@@ -99,6 +100,14 @@ function Experience() {
               <span className="company">{researchExperience.company}</span>
               <span className="duration">{researchExperience.duration}</span>
               <p className="research-title">{researchExperience.title}</p>
+              <a
+                href={researchExperience.publicationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="research-link"
+              >
+                View publication
+              </a>
               <ul className="research-points">
                 {researchExperience.points.map((point, i) => (
                   <li key={i}>{point}</li>

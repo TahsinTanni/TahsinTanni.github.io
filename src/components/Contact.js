@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import './Contact.css';
-import { FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { FiMail, FiLinkedin, FiGithub, FiBookOpen } from 'react-icons/fi';
 
 function Contact({ theme }) {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState('');
+
+  const isValidEmail = email => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 
   const handleChange = e => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,6 +15,11 @@ function Contact({ theme }) {
 
   const handleSubmit = async e => {
     e.preventDefault();
+    if (!isValidEmail(form.email)) {
+      setSubmitMessage('Please enter a valid email address before sending your message.');
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitMessage('');
 
@@ -51,7 +58,7 @@ function Contact({ theme }) {
       <div className="contact-content">
         <div className="contact-left">
           <h2 className="contact-heading">Contact</h2>
-          <p className="contact-subheading">Let’s build something amazing together 🚀</p>
+          <p className="contact-subheading">Open to professional collaborations, research discussions, and technical opportunities.</p>
           <form className="contact-form" onSubmit={handleSubmit}>
             <input 
               type="text" 
@@ -113,6 +120,11 @@ function Contact({ theme }) {
             <FiGithub size={28} className="contact-icon" />
             <span className="contact-label">GitHub</span>
             <a href="https://github.com/TahsinTanni" target="_blank" rel="noopener noreferrer" className="contact-link">/TahsinTanni</a>
+          </div>
+          <div className="contact-method">
+            <FiBookOpen size={28} className="contact-icon" />
+            <span className="contact-label">Scholar</span>
+            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&authuser=1&hl=en&user=JfVqCU8AAAAJ&authuser=1" target="_blank" rel="noopener noreferrer" className="contact-link">Google Scholar</a>
           </div>
         </div>
       </div>
