@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import './Achievements.css';
 import { FaCertificate, FaAward, FaMedal } from 'react-icons/fa';
@@ -48,6 +48,8 @@ const achievements = [
   
 ];
 
+const AUTO_ROTATE_DELAY = 2000;
+
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: i => ({
@@ -59,12 +61,36 @@ const cardVariants = {
 
 function Achievements() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPaused, setIsAutoPaused] = useState(false);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (isAutoPaused || prefersReducedMotion) {
+      return undefined;
+    }
+
+    const timer = setInterval(() => {
+      setActiveIndex(currentIndex => (currentIndex + 1) % achievements.length);
+    }, AUTO_ROTATE_DELAY);
+
+    return () => clearInterval(timer);
+  }, [isAutoPaused]);
 
   return (
     <div className="achievements-container">
       <section id="achievements" className="achievements-section">
         <h2 className="achievements-heading">Achievements</h2>
-        <div className="achievements-gallery">
+        <div
+          className="achievements-gallery"
+          onMouseEnter={() => setIsAutoPaused(true)}
+          onMouseLeave={() => setIsAutoPaused(false)}
+          onBlur={(event) => {
+            if (!event.currentTarget.contains(event.relatedTarget)) {
+              setIsAutoPaused(false);
+            }
+          }}
+        >
           {achievements.map((achievement, i) => (
             <motion.a
               href={achievement.certificate}
@@ -80,10 +106,14 @@ function Achievements() {
               animate={{ flexGrow: activeIndex === i ? 5 : 1 }}
               transition={{ type: "spring", stiffness: 180, damping: 24 }}
               onMouseEnter={() => setActiveIndex(i)}
-              onFocus={() => setActiveIndex(i)}
+              onFocus={() => {
+                setIsAutoPaused(true);
+                setActiveIndex(i);
+              }}
               onClick={(event) => {
                 if (activeIndex !== i) {
                   event.preventDefault();
+                  setIsAutoPaused(true);
                   setActiveIndex(i);
                 }
               }}

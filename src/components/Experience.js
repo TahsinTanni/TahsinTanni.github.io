@@ -50,7 +50,7 @@ const researchExperiences = [
     duration: "September 2026 – Present",
     title: "Research Training & Competition 2026",
     points: [
-      "Supported Team 13's research paper development through literature review, team coordination, academic writing, and competition preparation."
+      "Lead my Team's research paper development through methodology development, team coordination, academic writing, and competition preparation."
     ]
   }
 ];
