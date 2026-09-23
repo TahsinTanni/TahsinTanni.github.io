@@ -29,20 +29,31 @@ const experiences = [
   }
 ];
 
-const researchExperience = {
-  role: "Undergraduate Researcher",
-  company: "BRAC University, Department of Computer Science and Engineering",
-  duration: "January 2025 – January 2026",
-  title: "Anchor-guided repair: A Defense Mechanism for Enhancing Stability of Compromised Pretrained Language Models Against Low-Precision and Weight Noise Attacks",
-  publicationUrl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JfVqCU8AAAAJ&authuser=1&citation_for_view=JfVqCU8AAAAJ:9yKSN-GCB0IC",
-  points: [
-    "Large Language Models (LLMs) are vulnerable to post-release attacks such as weight noise injection and low-precision quantization, which degrade stability and performance. Users may unknowingly download compromised models without access to clean weights.",
-    "We propose Anchor-Guided Repair, a defense that fine-tunes attacked models on clean text while limiting parameter changes via an anchor loss that penalizes deviation from a clean, task-adapted baseline.",
-    "The method jointly optimizes language modeling loss and anchor regularization, reducing instability without distorting previously learned knowledge.",
-    "Tested on various architectures and attack types (Gaussian noise, low-bit quantization), Anchor-Guided Repair consistently outperforms compromised models, restoring reliability close to the clean baseline.",
-    "This approach demonstrates that anchoring provides a practical post-deployment defense, enabling safer and more trustworthy reuse of open-source LLMs without proprietary training data."
-  ]
-};
+const researchExperiences = [
+  {
+    role: "Undergraduate Researcher",
+    company: "BRAC University, Department of Computer Science and Engineering",
+    duration: "January 2025 – January 2026",
+    title: "Anchor-guided repair: A Defense Mechanism for Enhancing Stability of Compromised Pretrained Language Models Against Low-Precision and Weight Noise Attacks",
+    publicationUrl: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=JfVqCU8AAAAJ&authuser=1&citation_for_view=JfVqCU8AAAAJ:9yKSN-GCB0IC",
+    points: [
+      "Large Language Models (LLMs) are vulnerable to post-release attacks such as weight noise injection and low-precision quantization, which degrade stability and performance. Users may unknowingly download compromised models without access to clean weights.",
+      "We propose Anchor-Guided Repair, a defense that fine-tunes attacked models on clean text while limiting parameter changes via an anchor loss that penalizes deviation from a clean, task-adapted baseline.",
+      "The method jointly optimizes language modeling loss and anchor regularization, reducing instability without distorting previously learned knowledge.",
+      "Tested on various architectures and attack types (Gaussian noise, low-bit quantization), Anchor-Guided Repair consistently outperforms compromised models, restoring reliability close to the clean baseline.",
+      "This approach demonstrates that anchoring provides a practical post-deployment defense, enabling safer and more trustworthy reuse of open-source LLMs without proprietary training data."
+    ]
+  },
+  {
+    role: "Student Researcher",
+    company: "Elite Research Lab LLC",
+    duration: "September 2026 – Present",
+    title: "Research Training & Competition 2026",
+    points: [
+      "Supported Team 13's research paper development through literature review, team coordination, academic writing, and competition preparation."
+    ]
+  }
+];
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -85,36 +96,41 @@ function Experience() {
       <section id="research" className="experience-section" style={{ marginTop: '4rem' }}>
         <h2 className="experience-heading">Research Experience</h2>
         <div className="timeline">
-          <motion.div
-            className="timeline-card research-card"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.4 }}
-            variants={cardVariants}
-            custom={0}
-            whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(56, 189, 248, 0.3)" }}
-          >
-            <div className="timeline-dot" />
-            <div className="timeline-content">
-              <h3 className="role">{researchExperience.role}</h3>
-              <span className="company">{researchExperience.company}</span>
-              <span className="duration">{researchExperience.duration}</span>
-              <p className="research-title">{researchExperience.title}</p>
-              <a
-                href={researchExperience.publicationUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="research-link"
-              >
-                View publication
-              </a>
-              <ul className="research-points">
-                {researchExperience.points.map((point, i) => (
-                  <li key={i}>{point}</li>
-                ))}
-              </ul>
-            </div>
-          </motion.div>
+          {researchExperiences.map((researchExperience, i) => (
+            <motion.div
+              className="timeline-card research-card"
+              key={`${researchExperience.role}-${researchExperience.duration}`}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={cardVariants}
+              custom={i}
+              whileHover={{ scale: 1.03, boxShadow: "0 8px 32px rgba(56, 189, 248, 0.3)" }}
+            >
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h3 className="role">{researchExperience.role}</h3>
+                <span className="company">{researchExperience.company}</span>
+                <span className="duration">{researchExperience.duration}</span>
+                <p className="research-title">{researchExperience.title}</p>
+                {researchExperience.publicationUrl && (
+                  <a
+                    href={researchExperience.publicationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="research-link"
+                  >
+                    View publication
+                  </a>
+                )}
+                <ul className="research-points">
+                  {researchExperience.points.map((point, pointIndex) => (
+                    <li key={pointIndex}>{point}</li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
     </div>
