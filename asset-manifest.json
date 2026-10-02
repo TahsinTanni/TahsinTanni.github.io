@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.c40b2402.css",
-    "main.js": "/static/js/main.84f10ce3.js",
+    "main.css": "/static/css/main.cb0de3fe.css",
+    "main.js": "/static/js/main.55e9fd1d.js",
     "static/js/453.ad7768ec.chunk.js": "/static/js/453.ad7768ec.chunk.js",
+    "static/media/scopevanta.png": "/static/media/scopevanta.89436c097eb09fddd44c.png",
     "static/media/profmail.png": "/static/media/profmail.c5b58052300dc52820a1.png",
     "static/media/vae-clustering.jpg": "/static/media/vae-clustering.5a2000fe9696ae262275.jpg",
     "static/media/cse471-project-showcase.jpg": "/static/media/cse471-project-showcase.69580dc424cd3daab92a.jpg",
@@ -20,12 +21,12 @@
     "static/media/Tahsin_Tajwar_Tanni_ProfessionalCV.pdf": "/static/media/Tahsin_Tajwar_Tanni_ProfessionalCV.85fe295df76ee432d24f.pdf",
     "static/media/rag-slackbot.jpg": "/static/media/rag-slackbot.e9d1b07229e387857a47.jpg",
     "index.html": "/index.html",
-    "main.c40b2402.css.map": "/static/css/main.c40b2402.css.map",
-    "main.84f10ce3.js.map": "/static/js/main.84f10ce3.js.map",
+    "main.cb0de3fe.css.map": "/static/css/main.cb0de3fe.css.map",
+    "main.55e9fd1d.js.map": "/static/js/main.55e9fd1d.js.map",
     "453.ad7768ec.chunk.js.map": "/static/js/453.ad7768ec.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c40b2402.css",
-    "static/js/main.84f10ce3.js"
+    "static/css/main.cb0de3fe.css",
+    "static/js/main.55e9fd1d.js"
   ]
 }
