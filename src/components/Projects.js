@@ -10,10 +10,19 @@ import profMailImg from '../assets/profmail.png';
 import vaeClusteringImg from '../assets/vae-clustering.jpg';
 import disasterRecoveryImg from '../assets/disaster-recovery.jpg';
 import propertyTrackerImg from '../assets/property-tracker.jpg';
+import scopeVantaImg from '../assets/scopevanta.png';
 import { FiExternalLink, FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 import { FaGithub } from 'react-icons/fa';
 
 const projects = [
+  {
+    title: "ScopeVanta",
+    image: scopeVantaImg,
+    description: "An AI-powered commercial intelligence platform for service businesses that transforms client briefs into grounded, priced, and defensible proposals. It uses AI to analyze requirements, generate evidence-backed proposals, identify risks and clarification needs, and support pricing decisions. The platform also includes client deal rooms, scope baselines, change-order management, proposal auditing, and margin protection.",
+    tech: ["Next.js", "TypeScript", "Anthropic AI", "PostgreSQL", "Prisma", "Clerk", "Supabase", "Vercel"],
+    code: "https://github.com/TahsinTanni/scopeVanta2.0",
+    live: "https://scopevanta.com"
+  },
   {
     title: "RAG-Slackbot",
     image: ragSlackbotImg,

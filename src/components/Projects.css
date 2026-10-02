@@ -170,17 +170,18 @@
   opacity: 0.8 !important;
 }
 
-/* Show raw source image if available — use contain so full image is always visible */
+/* Show raw source image if available — use cover so the image fills the card frame */
 .project-img {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: contain !important;
+  object-fit: cover !important;
+  object-position: center top !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
   z-index: 4 !important;
-  padding: 4px !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
