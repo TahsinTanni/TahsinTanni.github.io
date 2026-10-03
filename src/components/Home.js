@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Home.css';
-import cvProfessional from '../assets/Tahsin_Tajwar_Tanni_ProfessionalCV.pdf';
-import cvAcademic from '../assets/Tahsin_Tajwar_Tanni_AcademicCV.pdf';
+import cvProfessional from '../assets/Tahsin Tajwar Tanni_Professional CV.pdf';
+import cvAcademic from '../assets/TahsinTajwarTanni_CV.pdf';
 import VariableProximity from './VariableProximity';
 
 const tagline = "AI & Automation Engineer • ML Researcher • Full-Stack Developer";
@@ -95,7 +95,7 @@ function Home() {
                 <ul className="cv-dropdown-menu">
                   <li>
                     <button
-                      onClick={() => handleDownload(cvProfessional, 'Tahsin_Tajwar_Tanni_ProfessionalCV.pdf')}
+                      onClick={() => handleDownload(cvProfessional, 'Tahsin Tajwar Tanni_Professional CV.pdf')}
                       aria-label="Download Professional CV"
                     >
                       Professional CV
@@ -103,7 +103,7 @@ function Home() {
                   </li>
                   <li>
                     <button
-                      onClick={() => handleDownload(cvAcademic, 'Tahsin_Tajwar_Tanni_AcademicCV.pdf')}
+                      onClick={() => handleDownload(cvAcademic, 'TahsinTajwarTanni_CV.pdf')}
                       aria-label="Download Academic CV"
                     >
                       Academic CV
