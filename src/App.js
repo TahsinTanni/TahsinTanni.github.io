@@ -11,17 +11,11 @@ import Footer from './components/Footer';
 import DotField from './components/DotField';
 import './index.css';
 
-function getInitialTheme() {
-  const saved = localStorage.getItem('theme');
-  return saved ? saved : 'dark';
-}
-
 function App() {
-  const [theme, setTheme] = useState(getInitialTheme());
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     document.body.className = theme;
-    localStorage.setItem('theme', theme);
   }, [theme]);
 
   // Smooth scroll handler for Navbar links

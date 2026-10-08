@@ -64,15 +64,88 @@
   align-items: center !important;
 }
 
-.profile-pic {
-  float: right !important;
-  width: 160px !important;
-  height: 200px !important;
-  object-fit: cover !important;
-  border-radius: 12px !important;
-  box-shadow: none !important;
-  border: none !important;
-  margin-top: 24px !important;
+/* Profile: black & white cut-out inside an oval of the accent colour whose
+   outline slowly morphs like liquid. Hover = real colours. */
+.profile-duo {
+  position: relative;
+  width: 270px;
+  aspect-ratio: 4 / 5;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.duo-shape {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10%;
+  bottom: 0;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--acc);
+  border-radius: 50%;
+  animation:
+    shapeReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) both,
+    shapeFlow 10s ease-in-out 0.9s infinite;
+}
+
+.duo-shape img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  display: block;
+  transform-origin: bottom center;
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.duo-tone {
+  filter: grayscale(1) contrast(1.08);
+  animation: figureRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.duo-color {
+  opacity: 0;
+}
+
+.profile-duo:hover .duo-color {
+  opacity: 1;
+}
+
+.profile-duo:hover .duo-shape img {
+  transform: scale(1.03);
+}
+
+/* Light theme: ink oval (the UI accent); a soft rim light keeps dark hair
+   from melting into it */
+body.light .duo-tone {
+  filter: grayscale(1) contrast(1.08) brightness(1.06) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
+}
+
+@keyframes shapeReveal {
+  from { clip-path: inset(100% 0 0 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes shapeFlow {
+  0%, 100% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; }
+  20% { border-radius: 58% 42% 47% 53% / 46% 54% 46% 54%; }
+  40% { border-radius: 45% 55% 56% 44% / 55% 45% 52% 48%; }
+  60% { border-radius: 54% 46% 42% 58% / 48% 57% 43% 52%; }
+  80% { border-radius: 43% 57% 53% 47% / 53% 47% 55% 45%; }
+}
+
+@keyframes figureRise {
+  from { opacity: 0; translate: 0 24px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .duo-shape,
+  .duo-tone {
+    animation: none;
+  }
 }
 
 .hero-btns {
@@ -240,8 +313,8 @@
   .hero-illustration {
     justify-content: center !important;
   }
-  .profile-pic {
-    float: none !important;
+  .profile-duo {
+    width: 220px;
   }
   .hero-btns {
     justify-content: center !important;

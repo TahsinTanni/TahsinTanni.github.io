@@ -3,6 +3,7 @@ import './Home.css';
 import cvProfessional from '../assets/Tahsin Tajwar Tanni_Professional CV.pdf';
 import cvAcademic from '../assets/TahsinTajwarTanni_CV.pdf';
 import VariableProximity from './VariableProximity';
+import profileCutout from '../assets/profile-cutout.png';
 
 const tagline = "AI & Automation Engineer • ML Researcher • Full-Stack Developer";
 
@@ -115,26 +116,12 @@ function Home() {
           </div>
         </div>
         <div className="hero-illustration">
-          <img
-            src={`${process.env.PUBLIC_URL}/pic.jpg`}
-            alt="Tahsin Tanni Profile"
-            className="profile-pic"
-            style={{
-              width: '180px',
-              height: '180px',
-              borderRadius: '20px',
-              objectFit: 'cover',
-              boxShadow: '0 8px 24px rgba(108, 99, 255, 0.2)',
-              border: '3px solid rgba(108, 99, 255, 0.1)'
-            }}
-            onLoad={() => {
-              console.log('Profile image loaded successfully in Home');
-            }}
-            onError={(e) => {
-              console.log('Failed to load image in Home, showing fallback');
-              e.target.style.display = 'none';
-            }}
-          />
+          <div className="profile-duo">
+            <div className="duo-shape">
+              <img src={profileCutout} alt="Tahsin Tanni" className="duo-tone" />
+              <img src={profileCutout} alt="" aria-hidden="true" className="duo-color" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

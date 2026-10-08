@@ -4,7 +4,7 @@
   border-radius: 16px !important;
   padding: 0 !important;
   margin: var(--section-gap) auto !important;
-  max-width: 900px !important;
+  max-width: 1100px !important;
   box-sizing: border-box !important;
   overflow: hidden !important;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18) !important;
@@ -32,10 +32,10 @@
 
 .contact-subheading {
   color: var(--sub) !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   line-height: 1.6 !important;
   margin: 0 0 28px 0 !important;
-  max-width: 560px !important;
+  max-width: 640px !important;
 }
 
 .contact-content {
@@ -70,7 +70,7 @@
   padding: 13px 16px !important;
   border-radius: 8px !important;
   border: 1px solid var(--border) !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   font-family: 'DM Sans', sans-serif !important;
   background: var(--bg) !important;
   color: var(--text) !important;
@@ -101,7 +101,7 @@ body.dark .contact-textarea:focus {
   border-radius: 8px !important;
   font-weight: 500 !important;
   border: none !important;
-  font-size: 14px !important;
+  font-size: 15px !important;
   cursor: pointer !important;
   font-family: 'DM Sans', sans-serif !important;
   transition: opacity 0.2s ease, transform 0.2s ease !important;
@@ -159,7 +159,7 @@ body.dark .contact-textarea:focus {
 
 .contact-label {
   align-self: start !important;
-  font-size: 12px !important;
+  font-size: 14px !important;
   font-weight: 500 !important;
   color: var(--sub) !important;
   font-family: 'DM Sans', sans-serif !important;
@@ -167,7 +167,7 @@ body.dark .contact-textarea:focus {
 
 .contact-link {
   align-self: start !important;
-  font-size: 14px !important;
+  font-size: 16px !important;
   color: var(--text) !important;
   text-decoration: none !important;
   font-family: 'DM Sans', sans-serif !important;
